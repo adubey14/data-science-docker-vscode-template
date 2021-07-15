@@ -3,8 +3,8 @@ set -e
 
 if [ $# -eq 0 ]
   then
-    jupyter lab --ip=0.0.0.0 --NotebookApp.token='local-development' --allow-root --no-browser &> /dev/null &
-    code-server1.408-vsc1.32.0-linux-x64/code-server --allow-http --no-auth --data-dir /data /code
+    /opt/conda/bin/jupyter lab --ip=0.0.0.0 --port=2222 --NotebookApp.token='local-development' --allow-root --no-browser &
+    code-server-3.11.0-linux-amd64/bin/code-server --auth none --user-data-dir /data /code --bind-addr=0.0.0.0:8443
   else
     exec "$@"
 fi

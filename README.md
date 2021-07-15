@@ -27,7 +27,7 @@ Say you rename the folder to `churn-prediction` - run the following:
 ```
 cd churn-prediction
 docker build -t churn-prediction .
-docker run -p 8443:8443 -p 8888:8888 -v $(pwd)/data:/data -v $(pwd)/code:/code --rm -it churn-prediction
+docker run -p 8443:8443 -p 2222:2222 -v $(pwd)/data:/data -v $(pwd)/code:/code --rm -it churn-prediction
 ```
 
 This will spin up the container - starting up JupyerLab and VSCode. 
@@ -38,7 +38,7 @@ http://localhost:8443
 
 JupyterLab will be running on:
 
-http://localhost:8888 with a token of `local-development`
+http://localhost:2222 with a token of `local-development`
 
 #### VSCode Extensions and Configuration
 
